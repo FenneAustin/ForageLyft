@@ -7,27 +7,27 @@ import unittest
 
 class TestWilloughbyEngine(unittest.TestCase):
     def test_needs_service_true(self):
-        current_mileage = 67031
-        last_service_mileage = 0
+        current_mileage = 231244
+        last_service_mileage = 100
         engine = WilloughbyEngine(current_mileage, last_service_mileage)
         self.assertTrue(engine.needs_service())
 
     def test_needs_service_false(self):
-        current_mileage = 60019
-        last_service_mileage = 20
+        current_mileage = 50505
+        last_service_mileage = 54
         engine = WilloughbyEngine(current_mileage, last_service_mileage)
         self.assertFalse(engine.needs_service())
 
 
 class TestCapuletEngine(unittest.TestCase):
     def test_needs_service_true(self):
-        current_mileage = 30001
+        current_mileage = 300055
         last_service_mileage = 0
         engine = CapuletEngine(current_mileage, last_service_mileage)
         self.assertTrue(engine.needs_service())
 
     def test_needs_service_false(self):
-        current_mileage = 30000
+        current_mileage = 60001
         last_service_mileage = 0
         engine = CapuletEngine(current_mileage, last_service_mileage)
         self.assertFalse(engine.needs_service())
